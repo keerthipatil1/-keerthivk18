@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #13dcdc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #9ee60d;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My To-Do List</h2>
+    
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button class="btn" onclick="addTask()">Add Task</button>
+    
+    <ul id="taskList"></ul>
+
+    <script>
+        // Function to add a task
+        function addTask() {
+            var taskInput = document.getElementById("taskInput").value;
+            if (taskInput === "") {
+                alert("Please enter a task.");
+                return;
+            }
+            
+            var ul = document.getElementById("taskList");
+            var li = document.createElement("li");
+
+            // Add the task text to the list item
+            li.textContent = taskInput;
+
+            // Create a button to remove the task
+            var removeBtn = document.createElement("button");
+            removeBtn.textContent = "remove";
+            removeBtn.style.marginLeft = "10px";
+            removeBtn.style.backgroundColor = "#f44336";
+            removeBtn.style.color = "white";
+            removeBtn.style.border = "none";
+            removeBtn.style.cursor = "pointer";
+            removeBtn.style.borderRadius = "4px";
+            removeBtn.onclick = function() {
+                ul.removeChild(li); // Remove task from the list
+            };
+            
+            li.appendChild(removeBtn);
+            ul.appendChild(li);
+
+            // Clear the input field after adding the task
+            document.getElementById("taskInput").value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keeru</title>
+</head>
+<body>
+    <div>
+    <form action="">
+        <label for="text">full name:</label>
+        <input type="text"id="text"name="full name"required/>
+
+    </div>
+<div>
+    <label for="email">email:</label>
+    <input type="email"id="email"name="email"required/>
+</div>
+    <div>
+    <label for="password">password:</label>
+    <input type="password"id="password"name="password"required/>
+</div>
+    <div>
+    <label for="age">age:</label>
+    <input type="age"id="age" name="age"required/>
+</div>
+    <div>
+    <label for="phone">phone number:</label>
+    <input type="tel"id="phone"name="phone"pattern="[0-9]{10}"required/>
+</div>
+    <div>
+    <label for="website">website:</label>
+    <input type="url" name="website" id="website"required/>
+</div>
+    <div>
+<label for="dob">date of birth</label>
+<input type="date" name="dob" id="dob"required/>
+</div>
+<div>
+<label for="time">preferred time:</label>
+<input type="time" name="time" id="time"required/>
+</div>
+<div>
+<label for="file">upload resume:</label>
+<input type="file" name="resume" id="file"required/>
+</div>
+<div>
+<label for="gender:">gender:</label>
+<input type="radio" name="gender" id="male" value="male"/>
+<label for="male">male</label>
+<input type="radio" name="gender" id="female" value="female">
+<label for="female">female</label>
+</div>
+
+<div>
+<label>hobbies:</label>
+<input type="checkbox" name="hobbies" id="sports" value="sports"/>
+<label for="sports">sports:</label>
+<input type="checkbox" id="music" name="hobbies" value="music"/>
+<label for="music">music</label>
+</div>
+
+<div>
+<label for="country">country:</label>
+<select name="country" id="country">
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="Uk">UK</option>
+</select>
+</div>
+<label for="experience">experience(years):</label>
+<input type="range" name="experience" id="experience" min="0" max="20"/>
+<div>
+    <label for="favcolor">favorite color</label>
+    <input type="color" name="favcolor" id="favcolor"/>
+
+    <input type="hidden" name="user_id" value="12345"/>
+
+    <button type="submit">submit</button>
+</div>
+    </form>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>product name</th>
+                <th>price</th>
+                <th>category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>smartphone</td>
+            <td>$500</td>
+            <td>electronics</td>
+                
+            </tr>
+            <tr>
+                <td>running shoes</td>
+                <td>$100</td>
+                <td>footwear</td>
+            </tr>
+            <tr>
+                <td>backpack</td>
+                <td>$50</td>
+                <td>accessories</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="flex-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <footer>
+        <p>&copy;all rights reserved.made by keerthi</p>
+    </footer>
+</body>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="color.css">
+</html>
